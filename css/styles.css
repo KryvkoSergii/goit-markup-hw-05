@@ -13,6 +13,8 @@
     --overlay: #3f51b5;
     --client-logo: #8E8F99;
     --dark: rgba(46, 47, 66, 0.7);
+
+    --modal-font-colour: var(--client-logo);
 }
 
 body {
@@ -154,6 +156,7 @@ ol {
 .banner {
     background-color: var(--dark-background);
     background-image: linear-gradient(var(--dark), var(--dark)), url(../images/people-office.jpg);
+    background-position: center;
     background-repeat: no-repeat;
     padding-top: 188px;
     padding-bottom: 188px;
@@ -305,7 +308,9 @@ ol {
 }
 
 .portfolio-navigation-btn:hover,
-.portfolio-navigation-btn:active {
+.portfolio-navigation-btn:active,
+.portfolio-navigation-btn:focus
+{
     box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.34), 0 6.7px 5.3px rgba(0, 0, 0, 0.048);
     color: var(--header-background);
     background-color: var(--on-hover);
@@ -381,12 +386,16 @@ ol {
     position: absolute;
     top: 25%;
     right: 37%;
+    height: 64px;
+    width: 64px;
 }
 
 .our-team-social-networks {
     display: flex;
+    flex-direction: row;
     gap: 24px;
-    padding-bottom: 32px;
+    margin-top: 8px;
+    margin-bottom: 32px;
     justify-content: center;
 }
 
@@ -411,16 +420,17 @@ ol {
     position: absolute;
     top: 30%;
     right: 30%;
+    fill: var(--header-background);
 }
 
 .our-team-shadow,
-.shadow-item:hover {
+.shadow-item:hover, .shadow-item:active, .shadow-item:focus {
     box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048);
 }
 
 .our-customer-container {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    margin-top: 120px;
+    margin-bottom: 120px;
 }
 
 .our-customers-backet {
@@ -437,16 +447,28 @@ ol {
     width: 168px;
 }
 
+.our-customer:hover {
+    border: var(--on-hover) solid 1px;
+    fill: var(--on-hover);
+}
+
 .our-customer-logo {
     position: absolute;
-    top: 17%;
-    right: 17%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    height: 56px;
+    width: 104px;
     fill: var(--client-logo);
+}
+
+.our-customer-logo:hover{
+    fill: var(--on-hover);
 }
 
 .our-customers-title {
     text-align: center;
-    padding-bottom: 72px;
+    margin-bottom: 72px;
     font-weight: 700;
     font-size: 36px;
     line-height: 40px;
@@ -515,16 +537,32 @@ ol {
 
 /* Modal */
 .close-button {
-position: absolute;
-top: 24px;
-right: 24px;
-
+    position: absolute;
+    outline: none;
+    top: 24px;
+    right: 24px;
     background-color: var(--header-border);
     height: 24px;
     width: 24px;
     border-radius: 12px;
-    border-color: var(--header-border);
+    border: var(--header-border) solid 2px;
     padding: 0;
+    cursor: pointer;
+    fill: var(--logo-text-color-dark);
+}
+
+.close-button:hover {
+    background-color: var(--on-hover);
+    border: var(--on-hover) solid 2px;
+}
+
+.close-button svg {
+    width: 8px;
+    height: 8px;
+}
+
+.close-button svg:hover {
+    fill: var(--header-border);
 }
 
 .backdrop {
@@ -550,8 +588,192 @@ right: 24px;
     border-radius: 4px;
 }
 
-.backdrop.is-hidden{
+.backdrop.is-hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+}
+
+/* form */
+.modal-lebel {
+    text-align: center;
+    padding: 72px 24px 16px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    text-align: center;
+}
+
+.modal-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-left: 24px;
+    padding-right: 24px;
+    color: var(--modal-font-colour);
+}
+
+.modal-form input {
+    border: 1px solid var(--modal-font-colour);
+    border-radius: 4px;
+    padding: 4px;
+    padding-left: 38px;
+}
+
+.modal-form input:focus-within {
+    outline: none;
+    border: 1px solid var(--logo-text-color-prefix);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.04em;
+    text-align: left;
+}
+
+.modal-form textarea {
+    resize: none;
+    height: 120px;
+    border: 1px solid var(--modal-font-colour);
+    border-radius: 4px;
+    padding-left: 16px;
+}
+
+.modal-form textarea:focus-within {
+    outline: none;
+    border: 1px solid var(--logo-text-color-prefix);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form a {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.04em;
+    text-align: left;
+}
+
+.modal-form-user {
+    background: url(../images/user.svg) no-repeat 19px 50%;
+    background-size: 14px;
+}
+
+.modal-form-user:focus-within{
+    background: url(../images/user-active.svg) no-repeat 19px 50%;
+    background-size: 14px;
+}
+
+.modal-form-tel {
+    background: url(../images/phone.svg) no-repeat 19px 50%;
+    background-size: 14px;
+}
+
+.modal-form-tel:focus-within {
+    background: url(../images/phone-active.svg) no-repeat 19px 50%;
+    background-size: 14px;
+}
+
+.modal-form-email {
+    background: url(../images/mail3.svg) no-repeat 19px 50%;
+    background-size: 14px;
+}
+
+.modal-form-emaill:focus-within {
+    background: url(../images/mail3-active.svg) no-repeat 19px 50%;
+    background-size: 14px;
+}
+
+.modal-submission-btn {
+    background-color: var(--logo-text-color-prefix);
+    color: var(--header-background);
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    height: 56px;
+    width: 169px;
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modal-submission-btn:hover,
+.modal-submission-btn:active {
+    background-color: var(--header-border);
+    color: var(--logo-text-color-prefix);
+    cursor: pointer;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-subscription-container {
+    position: relative;
+}
+
+.footer-subscription {
+    position: absolute;
+    transform: translateX(-40px);
+}
+
+.subscription:placeholder-shown{
+    color: var(--header-background);
+}
+
+.footer-subscription-form {
+    display: flex;
+    gap: 24px
+}
+
+.footer-subscription-form input{
+    padding-left: 16px;
+    background-color: var(--dark-background);
+    border: var(--header-background) solid 1px;
+    color: var(--header-background);
+}
+
+.footer-subscription-form-btn{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+    background-color: var(--logo-text-color-prefix);
+    color: var(--header-background);
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    height: 40px;
+    width: 165px;
+}
+
+.footer-subscription-form-btn:hover,
+.footer-subscription-form-btn:active,
+.footer-subscription-form-btn:focus{
+    background-color: var(--on-hover);
+    cursor: pointer;
+    fill: var(--on-hover);
+}
+
+.footer-subscription-form-btn a{
+    margin-left: 24px;
+}
+
+
+.footer-subscription-form-btn-icon{
+    height: 24px;
+    width: 24px;
+    background-color: var(--header-background);
+    fill: var(--logo-text-color-prefix);
 }

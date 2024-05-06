@@ -14,8 +14,8 @@
 </head>
 
 <body class="global">
-    <div class="container">
-        <header class="header">
+    <header class="header">
+        <div class="container">
             <div class="header-element-container">
                 <div class="header-navigation-wrapper">
                     <a href="./index.html" class="logo-text logo-dark"><span
@@ -37,16 +37,17 @@
                     </ul>
                 </address>
             </div>
-    </div>
+        </div>
     </header>
     <main>
-        <div class="container">
-            <section class="banner">
-                <div class="banner-wrapper">
-                    <h1 class="banner-text"> Effective Solutions for Your Business</h1>
-                    <button data-modal-open type="button" class="main-order-service-btn">Order Service</button>
-                </div>
-        </div>
+
+        <section class="banner">
+            <div class="container"></div>
+            <div class="banner-wrapper">
+                <h1 class="banner-text"> Effective Solutions for Your Business</h1>
+                <button data-modal-open type="button" class="main-order-service-btn">Order Service</button>
+            </div>
+            </div>
         </section>
         <section class="main-features-wrapper">
             <div class="container">
@@ -54,7 +55,9 @@
                 <ul class="main-features">
                     <li class="list-item main-feature-item">
                         <div class="main-feature-logo">
-                            <img class="main-feature-logo-logo" src="images/antenna.svg" />
+                            <svg class="main-feature-logo-logo">
+                                <use href="./images/icons.svg#antenna"></use>
+                            </svg>
                         </div>
                         <h3 class="main-feature-title-text">Strategy</h3>
                         <p class="main-feature-content-text">Our goal is to identify the business problem to walk away
@@ -63,7 +66,9 @@
                     </li>
                     <li class="list-item main-feature-item">
                         <div class="main-feature-logo">
-                            <img class="main-feature-logo-logo" src="images/clock.svg" />
+                            <svg class="main-feature-logo-logo">
+                                <use href="./images/icons.svg#clock"></use>
+                            </svg>
                         </div>
                         <h3 class="main-feature-title-text">Punctuality</h3>
                         <p class="main-feature-content-text">
@@ -74,7 +79,9 @@
                     </li>
                     <li class="list-item main-feature-item">
                         <div class="main-feature-logo">
-                            <img class="main-feature-logo-logo" src="images/diagram.svg" />
+                            <svg class="main-feature-logo-logo">
+                                <use href="./images/icons.svg#diagram"></use>
+                            </svg>
                         </div>
                         <h3 class="main-feature-title-text">Diligence</h3>
                         <p class="main-feature-content-text">
@@ -85,7 +92,9 @@
                     </li>
                     <li class="list-item main-feature-item">
                         <div class="main-feature-logo">
-                            <img class="main-feature-logo-logo" src="images/astronaut.svg" />
+                            <svg class="main-feature-logo-logo">
+                                <use href="./images/icons.svg#astronaut"></use>
+                            </svg>
                         </div>
                         <h3 class="main-feature-title-text">Technologies</h3>
                         <p class="main-feature-content-text">
@@ -117,28 +126,45 @@
                         <div class="main-person-data">
                             <h3 class="our-team-person-name">Mark Guerrero</h3>
                             <p>Product Designer</p>
-                        </div>
-                        <div class="our-team-social-networks">
-                            <div class="our-team-social-network">
-                                <svg class="our-team-social-network-logo">
-                                    <use href="./images/icons.svg#icon-instagram"></use>
-                                </svg>
-                            </div>
-                            <div class="our-team-social-network">
-                                <svg class="our-team-social-network-logo">
-                                    <use href="./images/icons.svg#icon-twitter"></use>
-                                </svg>
-                            </div>
-                            <div class="our-team-social-network">
-                                <svg class="our-team-social-network-logo">
-                                    <use href="./images/icons.svg#icon-facebook"></use>
-                                </svg>
-                            </div>
-                            <div class="our-team-social-network">
-                                <svg class="our-team-social-network-logo">
-                                    <use href="./images/icons.svg#icon-linkedin"></use>
-                                </svg>
-                            </div>
+                            <ul class="our-team-social-networks list-item">
+                                <li>
+                                    <a href="">
+                                        <div class="our-team-social-network">
+                                            <svg class="our-team-social-network-logo">
+                                                <use href="./images/icons.svg#icon-instagram"></use>
+                                            </svg>
+
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <div class="our-team-social-network">
+                                            <svg class="our-team-social-network-logo">
+                                                <use href="./images/icons.svg#icon-twitter"></use>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <div class="our-team-social-network">
+                                            <svg class="our-team-social-network-logo">
+                                                <use href="./images/icons.svg#icon-facebook"></use>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="our-team-social-network">
+                                    <a href="">
+                                        <div class="our-team-social-network">
+                                            <svg class="our-team-social-network-logo">
+                                                <use href="./images/icons.svg#icon-linkedin"></use>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </li>
                     <li class="list-item our-team-shadow">
@@ -146,28 +172,45 @@
                         <div class="main-person-data">
                             <h3 class="our-team-person-name">Tom Ford</h3>
                             <p>Frontend Developer</p>
-                        </div>
-                        <div class="our-team-social-networks">
-                            <div class="our-team-social-network">
-                                <svg class="our-team-social-network-logo">
-                                    <use href="./images/icons.svg#icon-instagram"></use>
-                                </svg>
-                            </div>
-                            <div class="our-team-social-network">
-                                <svg class="our-team-social-network-logo">
-                                    <use href="./images/icons.svg#icon-twitter"></use>
-                                </svg>
-                            </div>
-                            <div class="our-team-social-network">
-                                <svg class="our-team-social-network-logo">
-                                    <use href="./images/icons.svg#icon-facebook"></use>
-                                </svg>
-                            </div>
-                            <div class="our-team-social-network">
-                                <svg class="our-team-social-network-logo">
-                                    <use href="./images/icons.svg#icon-linkedin"></use>
-                                </svg>
-                            </div>
+                            <ul class="our-team-social-networks list-item">
+                                <li>
+                                    <a href="">
+                                        <div class="our-team-social-network">
+                                            <svg class="our-team-social-network-logo">
+                                                <use href="./images/icons.svg#icon-instagram"></use>
+                                            </svg>
+
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <div class="our-team-social-network">
+                                            <svg class="our-team-social-network-logo">
+                                                <use href="./images/icons.svg#icon-twitter"></use>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <div class="our-team-social-network">
+                                            <svg class="our-team-social-network-logo">
+                                                <use href="./images/icons.svg#icon-facebook"></use>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="our-team-social-network">
+                                    <a href="">
+                                        <div class="our-team-social-network">
+                                            <svg class="our-team-social-network-logo">
+                                                <use href="./images/icons.svg#icon-linkedin"></use>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </li>
                     <li class="list-item our-team-shadow">
@@ -175,28 +218,45 @@
                         <div class="main-person-data">
                             <h3 class="our-team-person-name">Camila Garcia</h3>
                             <p>Marketing</p>
-                        </div>
-                        <div class="our-team-social-networks">
-                            <div class="our-team-social-network">
-                                <svg class="our-team-social-network-logo">
-                                    <use href="./images/icons.svg#icon-instagram"></use>
-                                </svg>
-                            </div>
-                            <div class="our-team-social-network">
-                                <svg class="our-team-social-network-logo">
-                                    <use href="./images/icons.svg#icon-twitter"></use>
-                                </svg>
-                            </div>
-                            <div class="our-team-social-network">
-                                <svg class="our-team-social-network-logo">
-                                    <use href="./images/icons.svg#icon-facebook"></use>
-                                </svg>
-                            </div>
-                            <div class="our-team-social-network">
-                                <svg class="our-team-social-network-logo">
-                                    <use href="./images/icons.svg#icon-linkedin"></use>
-                                </svg>
-                            </div>
+                            <ul class="our-team-social-networks list-item">
+                                <li>
+                                    <a href="">
+                                        <div class="our-team-social-network">
+                                            <svg class="our-team-social-network-logo">
+                                                <use href="./images/icons.svg#icon-instagram"></use>
+                                            </svg>
+
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <div class="our-team-social-network">
+                                            <svg class="our-team-social-network-logo">
+                                                <use href="./images/icons.svg#icon-twitter"></use>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <div class="our-team-social-network">
+                                            <svg class="our-team-social-network-logo">
+                                                <use href="./images/icons.svg#icon-facebook"></use>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="our-team-social-network">
+                                    <a href="">
+                                        <div class="our-team-social-network">
+                                            <svg class="our-team-social-network-logo">
+                                                <use href="./images/icons.svg#icon-linkedin"></use>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </li>
                     <li class="list-item our-team-shadow">
@@ -204,64 +264,118 @@
                         <div class="main-person-data">
                             <h3 class="our-team-person-name">Daniel Wilson</h3>
                             <p class="our-team-person-position">UI Designer</p>
-                        </div>
-                        <div class="our-team-social-networks">
-                            <div class="our-team-social-network">
-                                <svg class="our-team-social-network-logo">
-                                    <use href="./images/icons.svg#icon-instagram"></use>
-                                </svg>
-                            </div>
-                            <div class="our-team-social-network">
-                                <svg class="our-team-social-network-logo">
-                                    <use href="./images/icons.svg#icon-twitter"></use>
-                                </svg>
-                            </div>
-                            <div class="our-team-social-network">
-                                <svg class="our-team-social-network-logo">
-                                    <use href="./images/icons.svg#icon-facebook"></use>
-                                </svg>
-                            </div>
-                            <div class="our-team-social-network">
-                                <svg class="our-team-social-network-logo">
-                                    <use href="./images/icons.svg#icon-linkedin"></use>
-                                </svg>
-                            </div>
+                            <ul class="our-team-social-networks list-item">
+                                <li>
+                                    <a href="">
+                                        <div class="our-team-social-network">
+                                            <svg class="our-team-social-network-logo">
+                                                <use href="./images/icons.svg#icon-instagram"></use>
+                                            </svg>
+
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <div class="our-team-social-network">
+                                            <svg class="our-team-social-network-logo">
+                                                <use href="./images/icons.svg#icon-twitter"></use>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <div class="our-team-social-network">
+                                            <svg class="our-team-social-network-logo">
+                                                <use href="./images/icons.svg#icon-facebook"></use>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="our-team-social-network">
+                                    <a href="">
+                                        <div class="our-team-social-network">
+                                            <svg class="our-team-social-network-logo">
+                                                <use href="./images/icons.svg#icon-linkedin"></use>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </li>
                 </ul>
             </div>
         </section>
         <section>
-            <div class="container our-customer-container">
-                <h2 class="our-customers-title">Customers</h2>
+            <div class="container">
+                <div class="container our-customer-container">
+                    <h2 class="our-customers-title">Customers</h2>
 
-                <div class="our-customers-backet">
-                    <div class="our-customer">
-                        <img src="./images/client1.svg" class="our-customer-logo" />
-                    </div>
-                    <div class="our-customer">
-                        <img src="./images/client2.svg" class="our-customer-logo" />
-                    </div>
-                    <div class="our-customer">
-                        <img src="./images/client3.svg" class="our-customer-logo" />
-                    </div>
-                    <div class="our-customer">
-                        <img src="./images/client4.svg" class="our-customer-logo" />
-                    </div>
-                    <div class="our-customer">
-                        <img src="./images/client5.svg" class="our-customer-logo" />
-                    </div>
-                    <div class="our-customer">
-                        <img src="./images/client6.svg" class="our-customer-logo" />
-                    </div>
+                    <ul class="our-customers-backet list-item">
+                        <li>
+                            <a href="">
+                                <div class="our-customer">
+                                    <svg class="our-customer-logo">
+                                        <use href="./images/icons.svg#client1"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="our-customer">
+                                    <svg class="our-customer-logo">
+                                        <use href="./images/icons.svg#client2"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="our-customer">
+                                    <svg class="our-customer-logo">
+                                        <use href="./images/icons.svg#client3"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="our-customer">
+                                    <svg class="our-customer-logo">
+                                        <use href="./images/icons.svg#client4"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="our-customer">
+                                    <svg class="our-customer-logo">
+                                        <use href="./images/icons.svg#client5"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="our-customer">
+                                    <svg class="our-customer-logo">
+                                        <use href="./images/icons.svg#client6"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-
         </section>
-
     </main>
-    <div class="container">
-        <footer class="footer-card">
+
+    <footer class="footer-card">
+        <div class="container">
             <div class="footer-wrapper">
                 <div>
                     <a href="./index.html" class="logo-text logo-light"><span
@@ -273,39 +387,98 @@
                 </div>
                 <div>
                     <p class="footer-social"> Social media</p>
-                    <div class="footer-social-networks">
-                        <div class="footer-social-network">
-                            <svg class="footer-social-network-logo">
-                                <use href="./images/icons.svg#icon-instagram"></use>
-                            </svg>
-                        </div>
-                        <div class="footer-social-network">
-                            <svg class="footer-social-network-logo">
-                                <use href="./images/icons.svg#icon-twitter"></use>
-                            </svg>
-                        </div>
-                        <div class="footer-social-network">
-                            <svg class="footer-social-network-logo">
-                                <use href="./images/icons.svg#icon-facebook"></use>
-                            </svg>
-                        </div>
-                        <div class="footer-social-network">
-                            <svg class="footer-social-network-logo">
-                                <use href="./images/icons.svg#icon-linkedin"></use>
-                            </svg>
-                        </div>
+                    <ul class="footer-social-networks list-item">
+                        <li>
+                            <a href="">
+                                <div class="footer-social-network">
+                                    <svg class="footer-social-network-logo">
+                                        <use href="./images/icons.svg#icon-instagram"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="footer-social-network">
+                                    <svg class="footer-social-network-logo">
+                                        <use href="./images/icons.svg#icon-twitter"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="footer-social-network">
+                                    <svg class="footer-social-network-logo">
+                                        <use href="./images/icons.svg#icon-facebook"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="footer-social-network">
+                                    <svg class="footer-social-network-logo">
+                                        <use href="./images/icons.svg#icon-linkedin"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-subscription-container">
+                    <div class="footer-subscription">
+                        <p class="footer-social">Subscribe</p>
+                        <form class="footer-subscription-form">
+                            <input name="subscription" type="text" placeholder="E-mail">
+                            <button class="footer-subscription-form-btn"><a>Subscribe</a>
+                                <svg class="footer-subscription-form-btn-icon">
+                                    <use href="./images/icons.svg#telegram"></use>
+                                </svg>
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
-        </footer>
-    </div>
+        </div>
+    </footer>
+
     <div class="backdrop is-hidden" data-modal>
         <div class="modal modal-animation">
             <button data-modal-close class="close-button">
-                    <img src="./images/close-button.svg" />
+                <svg>
+                    <use href="./images/icons.svg#close"></use>
+                </svg>
             </button>
+
+            <p class="modal-lebel">Leave your contacts and we will call you back</p>
+            <form class="modal-form">
+                <label>
+                    Name
+                    <input type="text" name="name" class="modal-form-user" required>
+                </label>
+                <label>
+                    Phone
+                    <input type="tel" name="phone" class="modal-form-tel">
+                </label>
+                <label>
+                    Email
+                    <input type="email" name="email" class="modal-form-email" required>
+                </label>
+                <label>
+                    Comment
+                    <textarea name="comment" placeholder="Text input"></textarea>
+                </label>
+                <div>
+                    <input type="checkbox" name="concent" value="concent" required /> <a>I accept the terms and
+                        conditions
+                        of the <a href="">Privacy Policy</a></a>
+                </div>
+                <button class="modal-submission-btn" type="button">Send</button>
+            </form>
         </div>
     </div>
+
     <script src="./js/modal.js"></script>
 </body>
 
