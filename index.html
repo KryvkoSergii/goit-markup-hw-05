@@ -431,7 +431,7 @@
                         <p class="footer-social">Subscribe</p>
                         <form class="footer-subscription-form">
                             <input name="subscription" type="text" placeholder="E-mail">
-                            <button class="footer-subscription-form-btn"><a>Subscribe</a>
+                            <button class="footer-subscription-form-btn">Subscribe
                                 <svg class="footer-subscription-form-btn-icon">
                                     <use href="./images/icons.svg#telegram"></use>
                                 </svg>
@@ -451,31 +451,41 @@
                 </svg>
             </button>
 
-            <p class="modal-lebel">Leave your contacts and we will call you back</p>
-            <form class="modal-form">
-                <label>
-                    Name
-                    <input type="text" name="name" class="modal-form-user" required>
-                </label>
-                <label>
-                    Phone
-                    <input type="tel" name="phone" class="modal-form-tel">
-                </label>
-                <label>
-                    Email
-                    <input type="email" name="email" class="modal-form-email" required>
-                </label>
-                <label>
-                    Comment
-                    <textarea name="comment" placeholder="Text input"></textarea>
-                </label>
-                <div>
-                    <input type="checkbox" name="concent" value="concent" required /> <a>I accept the terms and
-                        conditions
-                        of the <a href="">Privacy Policy</a></a>
-                </div>
-                <button class="modal-submission-btn" type="button">Send</button>
-            </form>
+            <div class="modal-container">
+                <p class="modal-label">Leave your contacts and we will call you back</p>
+                <form class="modal-form">
+                    <label class="modal-form-item">
+                        Name
+                        <svg>
+                            <use href="./images/icons.svg#user-icon"></use>
+                        </svg>
+                        <input type="text" name="name" required>
+                    </label>
+                    <label class="modal-form-item">
+                        Phone
+                        <svg>
+                            <use href="./images/icons.svg#phone-icon"></use>
+                        </svg>
+                        <input type="tel" name="phone">
+                    </label>
+                    <label class="modal-form-item">
+                        Email
+                        <svg>
+                            <use href="./images/icons.svg#email-icon"></use>
+                        </svg>
+                        <input type="email" name="email" class="modal-form-email" required>
+                    </label>
+                    <label class="modal-form-item">
+                        Comment
+                        <textarea name="comment" placeholder="Text input"></textarea>
+                    </label>
+                    <div class="custom-checkbox-container">
+                        <input type="checkbox" name="concent" value="concent" required class="custom-checkbox" id="custom-checkbox-id"/>
+                        <label for="custom-checkbox-id">I accept the terms and conditions of the <a href="">Privacy Policy</a></label>
+                    </div>
+                    <button class="modal-submission-btn" type="button">Send</button>
+                </form>
+            </div>
         </div>
     </div>
 
