@@ -309,8 +309,7 @@ ol {
 
 .portfolio-navigation-btn:hover,
 .portfolio-navigation-btn:active,
-.portfolio-navigation-btn:focus
-{
+.portfolio-navigation-btn:focus {
     box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.34), 0 6.7px 5.3px rgba(0, 0, 0, 0.048);
     color: var(--header-background);
     background-color: var(--on-hover);
@@ -424,7 +423,9 @@ ol {
 }
 
 .our-team-shadow,
-.shadow-item:hover, .shadow-item:active, .shadow-item:focus {
+.shadow-item:hover,
+.shadow-item:active,
+.shadow-item:focus {
     box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048);
 }
 
@@ -462,7 +463,7 @@ ol {
     fill: var(--client-logo);
 }
 
-.our-customer-logo:hover{
+.our-customer-logo:hover {
     fill: var(--on-hover);
 }
 
@@ -595,40 +596,67 @@ ol {
 }
 
 /* form */
-.modal-lebel {
+.modal-container {
+    margin-top: 72px;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+.modal-label {
     text-align: center;
-    padding: 72px 24px 16px;
     font-family: Roboto;
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
     letter-spacing: 0.02em;
     text-align: center;
+    margin-bottom: 16px;
 }
 
 .modal-form {
     position: relative;
     display: flex;
     flex-direction: column;
-    padding-left: 24px;
-    padding-right: 24px;
     color: var(--modal-font-colour);
 }
 
 .modal-form input {
+    margin-top: 4px;
     border: 1px solid var(--modal-font-colour);
     border-radius: 4px;
     padding: 4px;
+    height: 30px;
     padding-left: 38px;
 }
 
-.modal-form input:focus-within {
+.modal-form svg {
+    position: absolute;
+    top: 55%;
+    left: 16px;
+    height: 18px;
+    width: 18px;
+}
+
+.modal-form-item {
+    fill: var(--logo-text-color-dark);
+}
+
+.modal-form-item:focus-within,
+.modal-form-item:active,
+.modal-form-item:hover {
+    fill: var(--on-hover);
+}
+
+.modal-form input:focus-within,
+.modal-form input:active,
+.modal-form input:hover {
     outline: none;
     border: 1px solid var(--logo-text-color-prefix);
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form label {
+    position: relative;
     display: flex;
     flex-direction: column;
     margin-bottom: 8px;
@@ -641,11 +669,13 @@ ol {
 }
 
 .modal-form textarea {
+    font-family: var(--primary-font);
+    margin-top: 4px;
     resize: none;
     height: 120px;
     border: 1px solid var(--modal-font-colour);
     border-radius: 4px;
-    padding-left: 16px;
+    padding: 8px 16px;
 }
 
 .modal-form textarea:focus-within {
@@ -660,36 +690,6 @@ ol {
     line-height: 14px;
     letter-spacing: 0.04em;
     text-align: left;
-}
-
-.modal-form-user {
-    background: url(../images/user.svg) no-repeat 19px 50%;
-    background-size: 14px;
-}
-
-.modal-form-user:focus-within{
-    background: url(../images/user-active.svg) no-repeat 19px 50%;
-    background-size: 14px;
-}
-
-.modal-form-tel {
-    background: url(../images/phone.svg) no-repeat 19px 50%;
-    background-size: 14px;
-}
-
-.modal-form-tel:focus-within {
-    background: url(../images/phone-active.svg) no-repeat 19px 50%;
-    background-size: 14px;
-}
-
-.modal-form-email {
-    background: url(../images/mail3.svg) no-repeat 19px 50%;
-    background-size: 14px;
-}
-
-.modal-form-emaill:focus-within {
-    background: url(../images/mail3-active.svg) no-repeat 19px 50%;
-    background-size: 14px;
 }
 
 .modal-submission-btn {
@@ -716,6 +716,67 @@ ol {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.custom-checkbox+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+.custom-checkbox+label::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid var(--logo-text-color-dark);
+    border-radius: 0.25em;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+
+.custom-checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.custom-checkbox:checked+label::before {
+    border-color: var(--on-hover);
+    background-color: var(--on-hover);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+    ");
+
+}
+
+.custom-checkbox:not(:disabled):not(:checked)+label:hover::before {
+    border-color: var(--on-hover);
+}
+
+.custom-checkbox:not(:disabled):active+label::before {
+    background-color: var(--on-hover);
+    border-color: var(--on-hover);
+}
+
+.custom-checkbox:focus+label::before {
+    box-shadow: 0 0 0 0.2rem var(--on-hover) 0.25;
+}
+
+.custom-checkbox:focus:not(:checked)+label::before {
+    border-color: var(--on-hover);
+}
+
+.custom-checkbox:disabled+label::before {
+    background-color: #e9ecef;
+}
+
+.custom-checkbox-container {
+    display: flex;
+    align-items: center;
+}
+
 .footer-subscription-container {
     position: relative;
 }
@@ -725,7 +786,7 @@ ol {
     transform: translateX(-40px);
 }
 
-.subscription:placeholder-shown{
+.subscription:placeholder-shown {
     color: var(--header-background);
 }
 
@@ -734,14 +795,16 @@ ol {
     gap: 24px
 }
 
-.footer-subscription-form input{
+.footer-subscription-form input {
     padding-left: 16px;
+    width: 264px;
     background-color: var(--dark-background);
     border: var(--header-background) solid 1px;
+    border-radius: 4px;
     color: var(--header-background);
 }
 
-.footer-subscription-form-btn{
+.footer-subscription-form-btn {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -760,18 +823,14 @@ ol {
 
 .footer-subscription-form-btn:hover,
 .footer-subscription-form-btn:active,
-.footer-subscription-form-btn:focus{
+.footer-subscription-form-btn:focus {
     background-color: var(--on-hover);
     cursor: pointer;
     fill: var(--on-hover);
 }
 
-.footer-subscription-form-btn a{
-    margin-left: 24px;
-}
 
-
-.footer-subscription-form-btn-icon{
+.footer-subscription-form-btn-icon {
     height: 24px;
     width: 24px;
     background-color: var(--header-background);
