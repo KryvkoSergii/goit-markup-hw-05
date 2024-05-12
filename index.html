@@ -480,10 +480,18 @@
                         <textarea name="comment" placeholder="Text input"></textarea>
                     </label>
                     <div class="custom-checkbox-container">
-                        <input type="checkbox" name="concent" value="concent" required class="custom-checkbox" id="custom-checkbox-id"/>
-                        <label for="custom-checkbox-id">I accept the terms and conditions of the <a href="">Privacy Policy</a></label>
-                    </div>
-                    <button class="modal-submission-btn" type="button">Send</button>
+                        <input type="checkbox" name="concent" value="true" required
+                            class="custom-checkbox visual-hidden" id="custom-checkbox-id" />
+
+                            <label class="custom-checkbox-text" for="custom-checkbox-id">
+                                <span class="check-empty">
+                                    <svg class="input-check-icon">
+                                        <use href="./images/icons.svg#checkbox-custom"></use>
+                                    </svg>
+                                </span>
+                                I accept the terms and conditions of the <a href="">Privacy Policy</a>
+                            </label>
+                        <button class="modal-submission-btn" type="button">Send</button>
                 </form>
             </div>
         </div>
